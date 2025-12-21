@@ -14,7 +14,7 @@ import morerelics.MoreRelics;
 public class BeckoningSnecko extends BaseRelic {
     public static final String ID = MoreRelics.makeID("BeckoningSnecko");
     public static final RelicTier TIER = RelicTier.RARE;
-    public static final LandingSound LANDING_SOUND = LandingSound.MAGICAL;
+    public static final LandingSound LANDING_SOUND = LandingSound.MAGICAL; // TODO: Custom hissing sound
     public static final int NEW_MANTRA_AMOUNT = 8;
 
     public BeckoningSnecko() {

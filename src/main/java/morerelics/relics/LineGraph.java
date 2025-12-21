@@ -9,7 +9,7 @@ import morerelics.MoreRelics;
 public class LineGraph extends BaseRelic {
     public static final String ID = MoreRelics.makeID("LineGraph");
     public static final RelicTier TIER = RelicTier.UNCOMMON;
-    public static final LandingSound LANDING_SOUND = LandingSound.FLAT; // TODO: Custom sound
+    public static final LandingSound LANDING_SOUND = LandingSound.FLAT;
     public static final float INTEREST_AMOUNT = 0.02f;
 
     public LineGraph() {

@@ -15,7 +15,7 @@ import morerelics.MoreRelics;
 public class TheNeedle extends BaseRelic {
     public static final String ID = MoreRelics.makeID("TheNeedle");
     public static final RelicTier TIER = RelicTier.SHOP;
-    public static final LandingSound LANDING_SOUND = LandingSound.CLINK; // TODO: Custom sound
+    public static final LandingSound LANDING_SOUND = LandingSound.CLINK;
 
     public TheNeedle() {
         super(ID, TIER, LANDING_SOUND);

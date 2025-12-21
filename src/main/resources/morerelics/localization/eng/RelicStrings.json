@@ -87,5 +87,12 @@
     "DESCRIPTIONS": [
       "The first time you play a #b0 cost card each turn, draw #b1 card."
     ]
+  },
+  "${modID}:AdamantineHammer": {
+    "NAME": "Adamantine Hammer",
+    "FLAVOR": "FLAVOR TEXT TODO",
+    "DESCRIPTIONS": [
+      "When you smith at #yRest #ySites, you may choose an additional card to #yUpgrade."
+    ]
   }
 }

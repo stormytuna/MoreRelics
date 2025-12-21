@@ -9,7 +9,7 @@ import morerelics.MoreRelics;
 public class Lubricant extends BaseRelic {
     public static final String ID = MoreRelics.makeID("Lubricant");
     public static final RelicTier TIER = RelicTier.RARE;
-    public static final LandingSound LANDING_SOUND = LandingSound.FLAT; // TODO: Custom sound
+    public static final LandingSound LANDING_SOUND = LandingSound.FLAT;
 
     private boolean drawnCardThisTurn = true;
 

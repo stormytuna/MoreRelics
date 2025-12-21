@@ -10,7 +10,7 @@ import morerelics.MoreRelics;
 public class TheNail extends BaseRelic {
     public static final String ID = MoreRelics.makeID("TheNail");
     public static final RelicTier TIER = RelicTier.UNCOMMON;
-    public static final LandingSound LANDING_SOUND = LandingSound.CLINK; // TODO: Custom sound
+    public static final LandingSound LANDING_SOUND = LandingSound.CLINK;
 
     public TheNail() {
         super(ID, TIER, LANDING_SOUND);

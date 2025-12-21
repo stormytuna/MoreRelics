@@ -1,6 +1,5 @@
 package morerelics.relics;
 
-import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -12,7 +11,7 @@ import morerelics.MoreRelics;
 public class HarmonizationMatrix extends BaseRelic {
     public static final String ID = MoreRelics.makeID("HarmonizationMatrix");
     public static final RelicTier TIER = RelicTier.RARE;
-    public static final LandingSound LANDING_SOUND = LandingSound.MAGICAL;
+    public static final LandingSound LANDING_SOUND = LandingSound.CLINK;
     public static final int TURNS_TO_APPLY_FOCUS = 3;
 
     public HarmonizationMatrix() {

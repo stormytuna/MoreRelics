@@ -15,7 +15,7 @@ import morerelics.MoreRelics;
 public class MummifiedFoot extends BaseRelic {
     public static final String ID = MoreRelics.makeID("MummifiedFoot");
     public static final RelicTier TIER = RelicTier.UNCOMMON;
-    public static final LandingSound LANDING_SOUND = LandingSound.FLAT; // TODO: Custom sound
+    public static final LandingSound LANDING_SOUND = LandingSound.FLAT;
     private static boolean madeCardFreeThisCombat = true;
 
     public MummifiedFoot() {

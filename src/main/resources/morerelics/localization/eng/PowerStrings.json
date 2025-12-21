@@ -1,0 +1,8 @@
+{
+  "${modID}:MoldedSandPower": {
+    "NAME": "Molded Sand",
+    "DESCRIPTIONS": [
+      "Deal and receive double attack damage."
+    ]
+  }
+}

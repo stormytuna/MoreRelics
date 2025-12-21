@@ -1,0 +1,45 @@
+{
+  "${modID}:MoldedSand": {
+    "NAME": "Molded Sand",
+    "FLAVOR": "FLAVOR TEXT TODO",
+    "DESCRIPTIONS": [
+      "Deal and receive double attack damage."
+    ]
+  },
+  "${modID}:Eggshells": {
+    "NAME": "Eggshells",
+    "FLAVOR": "FLAVOR TEXT TODO",
+    "DESCRIPTIONS": [
+      "Cards you draw during your first turn are #yUpgraded for the rest of combat."
+    ]
+  },
+  "${modID}:TheNail": {
+    "NAME": "The Nail",
+    "FLAVOR": "FLAVOR TEXT TODO",
+    "DESCRIPTIONS": [
+      "Playing a card #yUpgrades it for the rest of combat."
+    ]
+  },
+  "${modID}:TheNeedle": {
+    "NAME": "The Needle",
+    "FLAVOR": "FLAVOR TEXT TODO",
+    "DESCRIPTIONS": [
+      "Playing an #yAttack converts #b1 #yStrength to #yDexterity. Playing a #ySkill converts #b1 #yDexterity to #yStrength."
+    ]
+  },
+  "${modID}:LineGraph": {
+    "NAME": "Line Graph",
+    "FLAVOR": "FLAVOR TEXT TODO",
+    "DESCRIPTIONS": [
+      "Whenever you climb a floor, gain #b",
+      " of your current #yGold as #yGold."
+    ]
+  },
+  "${modID}:LetterpressStamp": {
+    "NAME": "Letterpress Stamp",
+    "FLAVOR": "FLAVOR TEXT TODO",
+    "DESCRIPTIONS": [
+      "The first card you play each combat is played twice."
+    ]
+  }
+}

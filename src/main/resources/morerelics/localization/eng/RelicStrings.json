@@ -56,5 +56,13 @@
       "#yBlock is not removed at the start of your first #b",
       " turns."
     ]
+  },
+  "${modID}:StickyHand": {
+    "NAME": "Sticky Hand",
+    "FLAVOR": "FLAVOR TEXT TODO",
+    "DESCRIPTIONS": [
+      "Whenever you play an #yInnate card, draw #b",
+      " card."
+    ]
   }
 }

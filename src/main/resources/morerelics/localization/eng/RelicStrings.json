@@ -48,5 +48,13 @@
     "DESCRIPTIONS": [
       "The first card you play each combat costs #b0."
     ]
+  },
+  "${modID}:CloakOfDisplacement": {
+    "NAME": "Cloak of Displacement",
+    "FLAVOR": "FLAVOR TEXT TODO",
+    "DESCRIPTIONS": [
+      "#yBlock is not removed at the start of your first #b",
+      " turns."
+    ]
   }
 }

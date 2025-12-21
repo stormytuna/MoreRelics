@@ -21,7 +21,7 @@ public class TheNail extends BaseRelic {
     }
 
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0];
+        return DESCRIPTIONS[0];
     }
 
     public void onPlayCard(AbstractCard card, AbstractMonster monster) {

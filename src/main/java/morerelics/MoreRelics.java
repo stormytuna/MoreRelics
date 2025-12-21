@@ -7,6 +7,7 @@ import basemod.interfaces.EditKeywordsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
+import morerelics.relics.CloakOfDisplacement;
 import morerelics.relics.Eggshells;
 import morerelics.relics.LetterpressStamp;
 import morerelics.relics.LineGraph;
@@ -90,6 +91,7 @@ public class MoreRelics implements
         BaseMod.addRelic(new LineGraph(), RelicType.SHARED);
         BaseMod.addRelic(new LetterpressStamp(), RelicType.SHARED);
         BaseMod.addRelic(new MummifiedFoot(), RelicType.SHARED);
+        BaseMod.addRelic(new CloakOfDisplacement(), RelicType.SHARED);
     }
 
     /*----------Localization----------*/

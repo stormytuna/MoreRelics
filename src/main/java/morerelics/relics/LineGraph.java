@@ -21,7 +21,7 @@ public class LineGraph extends BaseRelic {
     }
 
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0] + String.format("%.0f%%", INTEREST_AMOUNT * 100) + this.DESCRIPTIONS[1];
+        return DESCRIPTIONS[0] + String.format("%.0f%%", INTEREST_AMOUNT * 100) + DESCRIPTIONS[1];
     }
 
     public void onEnterRoom(AbstractRoom room) {

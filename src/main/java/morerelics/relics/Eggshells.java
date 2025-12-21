@@ -21,7 +21,7 @@ public class Eggshells extends BaseRelic {
     }
 
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0];
+        return DESCRIPTIONS[0];
     }
 
     public void onCardDraw(AbstractCard drawnCard) {

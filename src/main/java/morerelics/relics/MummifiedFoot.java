@@ -27,7 +27,7 @@ public class MummifiedFoot extends BaseRelic {
     }
 
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0];
+        return DESCRIPTIONS[0];
     }
 
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
@@ -39,7 +39,6 @@ public class MummifiedFoot extends BaseRelic {
 
         addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         pulse = false;
-        grayscale = true;
     }
 
     public void onEnterRoom(AbstractRoom room) {
@@ -47,7 +46,6 @@ public class MummifiedFoot extends BaseRelic {
 
         flash();
         beginLongPulse();
-        grayscale = false;
     }
 
     @SpirePatch(clz = AbstractCard.class, method = "freeToPlay")

@@ -36,6 +36,7 @@ public class LetterpressStamp extends BaseRelic {
             doubledCardThisCombat = true;
 
             this.pulse = false;
+            grayscale = true;
             addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 
             AbstractCard temp = card.makeSameInstanceOf();
@@ -58,5 +59,6 @@ public class LetterpressStamp extends BaseRelic {
         doubledCardThisCombat = false;
         flash();
         beginLongPulse();
+        grayscale = false;
     }
 }

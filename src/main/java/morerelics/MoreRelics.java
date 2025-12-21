@@ -11,6 +11,7 @@ import morerelics.relics.Eggshells;
 import morerelics.relics.LetterpressStamp;
 import morerelics.relics.LineGraph;
 import morerelics.relics.MoldedSand;
+import morerelics.relics.MummifiedFoot;
 import morerelics.relics.TheNail;
 import morerelics.relics.TheNeedle;
 import morerelics.util.GeneralUtils;
@@ -88,6 +89,7 @@ public class MoreRelics implements
         BaseMod.addRelic(new MoldedSand(), RelicType.SHARED);
         BaseMod.addRelic(new LineGraph(), RelicType.SHARED);
         BaseMod.addRelic(new LetterpressStamp(), RelicType.SHARED);
+        BaseMod.addRelic(new MummifiedFoot(), RelicType.SHARED);
     }
 
     /*----------Localization----------*/

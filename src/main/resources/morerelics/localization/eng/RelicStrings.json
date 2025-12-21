@@ -41,5 +41,12 @@
     "DESCRIPTIONS": [
       "The first card you play each combat is played twice."
     ]
+  },
+  "${modID}:MummifiedFoot": {
+    "NAME": "Mummified Foot",
+    "FLAVOR": "FLAVOR TEXT TODO",
+    "DESCRIPTIONS": [
+      "The first card you play each combat costs #b0."
+    ]
   }
 }

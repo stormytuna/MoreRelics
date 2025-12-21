@@ -123,5 +123,14 @@
     "DESCRIPTIONS": [
       "Gain [E] at the start of your turn. You cannot gain energy during your turn."
     ]
+  },
+  "${modID}:ProstheticLimb": {
+    "NAME": "Prosthetic Limb",
+    "FLAVOR": "A limb ripped from an automoton, it still retains some energy.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, draw #b",
+      " card. Your hand size limit is increased by #b",
+      "."
+    ]
   }
 }

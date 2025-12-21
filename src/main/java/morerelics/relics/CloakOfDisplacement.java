@@ -10,7 +10,7 @@ import morerelics.MoreRelics;
 
 public class CloakOfDisplacement extends BaseRelic {
     public static final String ID = MoreRelics.makeID("CloakOfDisplacement");
-    public static final RelicTier TIER = RelicTier.BOSS;
+    public static final RelicTier TIER = RelicTier.UNCOMMON;
     public static final LandingSound LANDING_SOUND = LandingSound.MAGICAL;
     public static final int TURNS_TO_APPLY = 2;
 

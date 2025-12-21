@@ -2,13 +2,10 @@ package morerelics.relics;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.BlurPower;
 import com.megacrit.cardcrawl.powers.watcher.MantraPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
@@ -16,7 +13,7 @@ import morerelics.MoreRelics;
 
 public class BeckoningSnecko extends BaseRelic {
     public static final String ID = MoreRelics.makeID("BeckoningSnecko");
-    public static final RelicTier TIER = RelicTier.BOSS;
+    public static final RelicTier TIER = RelicTier.RARE;
     public static final LandingSound LANDING_SOUND = LandingSound.MAGICAL;
     public static final int NEW_MANTRA_AMOUNT = 8;
 

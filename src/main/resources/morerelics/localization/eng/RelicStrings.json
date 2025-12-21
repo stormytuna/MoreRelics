@@ -72,5 +72,20 @@
       "You only need #b",
       " #yMantra to enter #yDivinity."
     ]
+  },
+  "${modID}:HarmonizationMatrix": {
+    "NAME": "Harmonization Matrix",
+    "FLAVOR": "FLAVOR TEXT TODO",
+    "DESCRIPTIONS": [
+      "At the start of your first #b",
+      " turns, gain #b1 #yFocus."
+    ]
+  },
+  "${modID}:Lubricant": {
+    "NAME": "Lubricant",
+    "FLAVOR": "FLAVOR TEXT TODO",
+    "DESCRIPTIONS": [
+      "The first time you play a #b0 cost card each turn, draw #b1 card."
+    ]
   }
 }

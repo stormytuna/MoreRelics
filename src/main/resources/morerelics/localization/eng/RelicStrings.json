@@ -94,5 +94,12 @@
     "DESCRIPTIONS": [
       "When you smith at #yRest #ySites, you may choose an additional card to #yUpgrade."
     ]
+  },
+  "${modID}:TrainingWheels": {
+    "NAME": "Training Wheels",
+    "FLAVOR": "FLAVOR TEXT TODO",
+    "DESCRIPTIONS": [
+      "All cards cost #b1 [E] to play."
+    ]
   }
 }

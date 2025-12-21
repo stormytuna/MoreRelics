@@ -4,5 +4,13 @@
     "DESCRIPTIONS": [
       "Deal and receive double attack damage."
     ]
+  },
+  "${modID}:ZealPower": {
+    "NAME": "Zeal",
+    "DESCRIPTIONS": [
+      "Negates #b",
+      " buff.",
+      " buffs."
+    ]
   }
 }

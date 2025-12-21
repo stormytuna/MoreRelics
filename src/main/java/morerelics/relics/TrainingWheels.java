@@ -26,6 +26,10 @@ public class TrainingWheels extends BaseRelic {
     public void update() {
         super.update();
 
+        if (AbstractDungeon.player ==  null) {
+            return;
+        }
+
         for (AbstractCard card : AbstractDungeon.player.hand.group) {
             card.setCostForTurn(1);
         }

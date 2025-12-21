@@ -108,5 +108,13 @@
     "DESCRIPTIONS": [
       "Gain [E] at the start of each turn. Whenever you remove or #yTransform a card in your deck, add a random #yCurse to your deck."
     ]
+  },
+  "${modID}:PuritySeal": {
+    "NAME": "Purity Seal",
+    "FLAVOR": "Littered with prayers to \"The Emperor\". Holding it fills you with fervor.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of each turn. Negates the first #b",
+      " buffs you gain each combat."
+    ]
   }
 }

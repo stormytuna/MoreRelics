@@ -132,5 +132,13 @@
       " card. Your hand size limit is increased by #b",
       "."
     ]
+  },
+  "${modID}:CrimsonLily": {
+    "NAME": "Crimson Lily",
+    "FLAVOR": "Ancient scripts describe warriors using these flowers to channel their fury.",
+    "DESCRIPTIONS": [
+      "Whenever you enter #yWrath, gain #b",
+      " temporary #yStrength."
+    ]
   }
 }

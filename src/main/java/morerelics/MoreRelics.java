@@ -10,6 +10,7 @@ import basemod.interfaces.PostInitializeSubscriber;
 import morerelics.relics.AdamantineHammer;
 import morerelics.relics.BeckoningSnecko;
 import morerelics.relics.CloakOfDisplacement;
+import morerelics.relics.CrimsonLily;
 import morerelics.relics.Eggshells;
 import morerelics.relics.HarmonizationMatrix;
 import morerelics.relics.LetterpressStamp;
@@ -112,6 +113,7 @@ public class MoreRelics implements
         BaseMod.addRelic(new HarmonizationMatrix(), RelicType.BLUE);
         BaseMod.addRelic(new Lubricant(), RelicType.BLUE);
         BaseMod.addRelic(new BeckoningSnecko(), RelicType.PURPLE);
+        BaseMod.addRelic(new CrimsonLily(), RelicType.PURPLE);
     }
 
     /*----------Localization----------*/

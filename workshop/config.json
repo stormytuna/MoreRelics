@@ -1,0 +1,10 @@
+{
+  "title": "More Relics",
+  "description": "Adds some new relics and pads out Defect's and Watcher's relic pools.",
+  "visibility": "private",
+  "changeNote": "v0.0.0\n\n- Prerelease",
+  "tags": [
+    "Relics",
+    "Content"
+  ]
+}

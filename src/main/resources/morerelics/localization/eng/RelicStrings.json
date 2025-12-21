@@ -62,7 +62,15 @@
     "FLAVOR": "FLAVOR TEXT TODO",
     "DESCRIPTIONS": [
       "Whenever you play an #yInnate card, draw #b",
-      " card."
+      " turns."
+    ]
+  },
+  "${modID}:BeckoningSnecko": {
+    "NAME": "Beckoning Snecko",
+    "FLAVOR": "FLAVOR TEXT TODO",
+    "DESCRIPTIONS": [
+      "You only need #b",
+      " #yMantra to enter #yDivinity."
     ]
   }
 }

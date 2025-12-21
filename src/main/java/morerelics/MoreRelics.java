@@ -7,6 +7,7 @@ import basemod.interfaces.EditKeywordsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
+import morerelics.relics.BeckoningSnecko;
 import morerelics.relics.CloakOfDisplacement;
 import morerelics.relics.Eggshells;
 import morerelics.relics.LetterpressStamp;
@@ -94,6 +95,7 @@ public class MoreRelics implements
         BaseMod.addRelic(new MummifiedFoot(), RelicType.SHARED);
         BaseMod.addRelic(new CloakOfDisplacement(), RelicType.SHARED);
         BaseMod.addRelic(new StickyHand(), RelicType.SHARED);
+        BaseMod.addRelic(new BeckoningSnecko(), RelicType.PURPLE);
     }
 
     /*----------Localization----------*/

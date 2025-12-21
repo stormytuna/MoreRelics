@@ -18,6 +18,7 @@ import morerelics.relics.Lubricant;
 import morerelics.relics.MoldedSand;
 import morerelics.relics.MummifiedFoot;
 import morerelics.relics.StickyHand;
+import morerelics.relics.StuffedBird;
 import morerelics.relics.TheNail;
 import morerelics.relics.TheNeedle;
 import morerelics.relics.TrainingWheels;
@@ -101,6 +102,7 @@ public class MoreRelics implements
         BaseMod.addRelic(new StickyHand(), RelicType.SHARED);
         BaseMod.addRelic(new AdamantineHammer(), RelicType.SHARED);
         BaseMod.addRelic(new TrainingWheels(), RelicType.SHARED);
+        BaseMod.addRelic(new StuffedBird(), RelicType.SHARED);
         BaseMod.addRelic(new HarmonizationMatrix(), RelicType.BLUE);
         BaseMod.addRelic(new Lubricant(), RelicType.BLUE);
         BaseMod.addRelic(new BeckoningSnecko(), RelicType.PURPLE);

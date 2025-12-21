@@ -101,5 +101,12 @@
     "DESCRIPTIONS": [
       "All cards cost #b1 [E] to play."
     ]
+  },
+  "${modID}:StuffedBird": {
+    "NAME": "Stuffed Bird",
+    "FLAVOR": "FLAVOR TEXT TODO",
+    "DESCRIPTIONS": [
+      "Gain #b1 [E] at the start of each turn. Whenever you remove or #yTransform a card in your deck, add a random #yCurse to your deck."
+    ]
   }
 }

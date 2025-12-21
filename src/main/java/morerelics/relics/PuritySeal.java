@@ -1,9 +1,12 @@
 package morerelics.relics;
 
+import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import morerelics.MoreRelics;
 import morerelics.powers.ZealPower;
@@ -34,9 +37,19 @@ public class PuritySeal extends BaseRelic {
         AbstractDungeon.player.energy.energyMaster--;
     }
 
-    public void atBattleStart() {
-        flash();
-        addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ZealPower(AbstractDungeon.player, ZEAL_AMOUNT)));
-        addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-    } 
+    // Applying after all other battle start relics, but before turn start relics
+    @SpirePatch(clz = AbstractRoom.class, method = "update")
+    public static class ApplyPuritySealZealPowerPatch {
+        @SpireInsertPatch(rloc = 41)
+        public static void patch() {
+            AbstractRelic relic = AbstractDungeon.player.getRelic(PuritySeal.ID);
+            if (relic == null) {
+                return;
+            }
+
+            relic.flash();
+            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ZealPower(AbstractDungeon.player, ZEAL_AMOUNT)));
+            AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, relic));
+        }
+    }
 }

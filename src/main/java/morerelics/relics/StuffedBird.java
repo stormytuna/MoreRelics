@@ -58,6 +58,14 @@ public class StuffedBird extends BaseRelic {
         return DESCRIPTIONS[0];
     }
 
+    public void onEquip() {
+        AbstractDungeon.player.energy.energyMaster++;
+    }
+
+    public void onUnequip() {
+        AbstractDungeon.player.energy.energyMaster--;
+    }
+
     public void update() {
         super.update();
 

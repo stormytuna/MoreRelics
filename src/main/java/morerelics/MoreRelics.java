@@ -22,6 +22,7 @@ import morerelics.relics.StickyHand;
 import morerelics.relics.StuffedBird;
 import morerelics.relics.TheNail;
 import morerelics.relics.TheNeedle;
+import morerelics.relics.TinBracelet;
 import morerelics.relics.TrainingWheels;
 import morerelics.util.GeneralUtils;
 import morerelics.util.KeywordInfo;
@@ -105,6 +106,7 @@ public class MoreRelics implements
         BaseMod.addRelic(new TrainingWheels(), RelicType.SHARED);
         BaseMod.addRelic(new StuffedBird(), RelicType.SHARED);
         BaseMod.addRelic(new PuritySeal(), RelicType.SHARED);
+        BaseMod.addRelic(new TinBracelet(), RelicType.SHARED);
         BaseMod.addRelic(new HarmonizationMatrix(), RelicType.BLUE);
         BaseMod.addRelic(new Lubricant(), RelicType.BLUE);
         BaseMod.addRelic(new BeckoningSnecko(), RelicType.PURPLE);

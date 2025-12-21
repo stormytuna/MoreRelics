@@ -116,5 +116,12 @@
       "Gain [E] at the start of each turn. Negates the first #b",
       " buffs you gain each combat."
     ]
+  },
+  "${modID}:TinBracelet": {
+    "NAME": "Tin Bracelet",
+    "FLAVOR": "An unremarkable bracelet.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. You cannot gain energy during your turn."
+    ]
   }
 }

@@ -10,7 +10,7 @@ import morerelics.MoreRelics;
 public class StickyHand extends BaseRelic {
     public static final String ID = MoreRelics.makeID("StickyHand");
     public static final RelicTier TIER = RelicTier.UNCOMMON;
-    public static final LandingSound LANDING_SOUND = LandingSound.FLAT; // TODO: Custom slap sound
+    public static final LandingSound LANDING_SOUND = LandingSound.FLAT;
     public static final int DRAW_AMOUNT = 1;
 
     public StickyHand() {

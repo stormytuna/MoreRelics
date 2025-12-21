@@ -10,7 +10,7 @@ import morerelics.MoreRelics;
 public class Eggshells extends BaseRelic {
     public static final String ID = MoreRelics.makeID("Eggshells");
     public static final RelicTier TIER = RelicTier.UNCOMMON;
-    public static final LandingSound LANDING_SOUND = LandingSound.SOLID; // TODO: Custom egg cracking sound
+    public static final LandingSound LANDING_SOUND = LandingSound.FLAT;
 
     public Eggshells() {
         super(ID, TIER, LANDING_SOUND);

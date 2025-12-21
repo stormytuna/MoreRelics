@@ -9,7 +9,7 @@ import morerelics.MoreRelics;
 public class TrainingWheels extends BaseRelic {
     public static final String ID = MoreRelics.makeID("TrainingWheels");
     public static final RelicTier TIER = RelicTier.BOSS;
-    public static final LandingSound LANDING_SOUND = LandingSound.HEAVY; // TODO: Custom egg cracking sound
+    public static final LandingSound LANDING_SOUND = LandingSound.HEAVY;
 
     public TrainingWheels() {
         super(ID, TIER, LANDING_SOUND);

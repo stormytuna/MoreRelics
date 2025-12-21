@@ -1,7 +1,6 @@
 package morerelics.relics;
 
 import com.evacipated.cardcrawl.modthespire.lib.ByRef;
-import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
@@ -10,15 +9,13 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAndEnableControlsAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 
 import morerelics.MoreRelics;
 
 public class TinBracelet extends BaseRelic {
     public static final String ID = MoreRelics.makeID("TinBracelet");
     public static final RelicTier TIER = RelicTier.BOSS;
-    public static final LandingSound LANDING_SOUND = LandingSound.CLINK; // TODO: Custom sound maybe
+    public static final LandingSound LANDING_SOUND = LandingSound.CLINK;
 
     private static boolean canGainEnergy = true;
 

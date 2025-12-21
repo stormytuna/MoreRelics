@@ -1,12 +1,9 @@
 package morerelics.relics;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
-import com.megacrit.cardcrawl.actions.GameActionManager;
-import com.megacrit.cardcrawl.actions.common.UpgradeSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
@@ -30,7 +27,7 @@ import morerelics.MoreRelics;
 public class StuffedBird extends BaseRelic {
     public static final String ID = MoreRelics.makeID("StuffedBird");
     public static final RelicTier TIER = RelicTier.BOSS;
-    public static final LandingSound LANDING_SOUND = LandingSound.FLAT; // TODO: Custom bird caw sound
+    public static final LandingSound LANDING_SOUND = LandingSound.FLAT;
     public static final AbstractCard[] ALLOWED_CURSES = {
         new Clumsy(),
         new Decay(),

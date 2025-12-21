@@ -53,7 +53,6 @@ import java.util.*;
 public class MoreRelics implements
         EditStringsSubscriber,
         EditRelicsSubscriber,
-        AddAudioSubscriber,
         PostInitializeSubscriber {
     public static ModInfo info;
     public static String modID; //Edit your pom.xml to change this
@@ -151,50 +150,6 @@ public class MoreRelics implements
                 localizationPath(lang, "RelicStrings.json"));
         BaseMod.loadCustomStringsFile(UIStrings.class,
                 localizationPath(lang, "UIStrings.json"));
-    }
-
-    @Override
-    public void receiveAddAudio() {
-        loadAudio(Sounds.class);
-    }
-
-    private static final String[] AUDIO_EXTENSIONS = { ".ogg", ".wav", ".mp3" }; //There are more valid types, but not really worth checking them all here
-    private void loadAudio(Class<?> cls) {
-        try {
-            Field[] fields = cls.getDeclaredFields();
-            outer:
-            for (Field f : fields) {
-                int modifiers = f.getModifiers();
-                if (Modifier.isStatic(modifiers) && Modifier.isPublic(modifiers) && f.getType().equals(String.class)) {
-                    String s = (String) f.get(null);
-                    if (s == null) { //If no defined value, determine path using field name
-                        s = audioPath(f.getName());
-
-                        for (String ext : AUDIO_EXTENSIONS) {
-                            String testPath = s + ext;
-                            if (Gdx.files.internal(testPath).exists()) {
-                                s = testPath;
-                                BaseMod.addAudio(s, s);
-                                f.set(null, s);
-                                continue outer;
-                            }
-                        }
-                        throw new Exception("Failed to find an audio file \"" + f.getName() + "\" in " + resourcesFolder + "/audio; check to ensure the capitalization and filename are correct.");
-                    }
-                    else { //Otherwise, load defined path
-                        if (Gdx.files.internal(s).exists()) {
-                            BaseMod.addAudio(s, s);
-                        }
-                        else {
-                            throw new Exception("Failed to find audio file \"" + s + "\"; check to ensure this is the correct filepath.");
-                        }
-                    }
-                }
-            }
-        }
-        catch (Exception e) {
-            logger.error("Exception occurred in loadAudio: ", e);
-        }
     }
 
     //These methods are used to generate the correct filepaths to various parts of the resources folder.

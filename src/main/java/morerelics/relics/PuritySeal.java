@@ -14,7 +14,7 @@ import morerelics.powers.ZealPower;
 public class PuritySeal extends BaseRelic {
     public static final String ID = MoreRelics.makeID("PuritySeal");
     public static final RelicTier TIER = RelicTier.BOSS;
-    public static final LandingSound LANDING_SOUND = LandingSound.FLAT; // TODO: Custom sound maybe
+    public static final LandingSound LANDING_SOUND = LandingSound.FLAT;
     public static final int ZEAL_AMOUNT = 2;
 
     public PuritySeal() {

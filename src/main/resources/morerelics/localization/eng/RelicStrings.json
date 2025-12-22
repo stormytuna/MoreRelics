@@ -140,5 +140,13 @@
       "Whenever you enter #yWrath, gain #b",
       " temporary #yStrength."
     ]
+  },
+  "${modID}:BarbedWire": {
+    "NAME": "Barbed Wire",
+    "FLAVOR": "Prickly metal wire woven into a spiral, it seems to have been cut short.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yThorns."
+    ]
   }
 }

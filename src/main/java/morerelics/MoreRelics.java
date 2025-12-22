@@ -7,6 +7,7 @@ import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
 import morerelics.relics.AdamantineHammer;
+import morerelics.relics.BarbedWire;
 import morerelics.relics.BeckoningSnecko;
 import morerelics.relics.CloakOfDisplacement;
 import morerelics.relics.CrimsonLily;
@@ -90,21 +91,22 @@ public class MoreRelics implements
 
     @Override
     public void receiveEditRelics() {
+        BaseMod.addRelic(new AdamantineHammer(), RelicType.SHARED);
+        BaseMod.addRelic(new BarbedWire(), RelicType.SHARED);
+        BaseMod.addRelic(new CloakOfDisplacement(), RelicType.SHARED);
         BaseMod.addRelic(new Eggshells(), RelicType.SHARED);
+        BaseMod.addRelic(new LetterpressStamp(), RelicType.SHARED);
+        BaseMod.addRelic(new LineGraph(), RelicType.SHARED);
+        BaseMod.addRelic(new MoldedSand(), RelicType.SHARED);
+        BaseMod.addRelic(new MummifiedFoot(), RelicType.SHARED);
+        BaseMod.addRelic(new ProstheticLimb(), RelicType.SHARED);
+        BaseMod.addRelic(new PuritySeal(), RelicType.SHARED);
+        BaseMod.addRelic(new StickyHand(), RelicType.SHARED);
+        BaseMod.addRelic(new StuffedBird(), RelicType.SHARED);
         BaseMod.addRelic(new TheNail(), RelicType.SHARED);
         BaseMod.addRelic(new TheNeedle(), RelicType.SHARED);
-        BaseMod.addRelic(new MoldedSand(), RelicType.SHARED);
-        BaseMod.addRelic(new LineGraph(), RelicType.SHARED);
-        BaseMod.addRelic(new LetterpressStamp(), RelicType.SHARED);
-        BaseMod.addRelic(new MummifiedFoot(), RelicType.SHARED);
-        BaseMod.addRelic(new CloakOfDisplacement(), RelicType.SHARED);
-        BaseMod.addRelic(new StickyHand(), RelicType.SHARED);
-        BaseMod.addRelic(new AdamantineHammer(), RelicType.SHARED);
-        BaseMod.addRelic(new TrainingWheels(), RelicType.SHARED);
-        BaseMod.addRelic(new StuffedBird(), RelicType.SHARED);
-        BaseMod.addRelic(new PuritySeal(), RelicType.SHARED);
         BaseMod.addRelic(new TinBracelet(), RelicType.SHARED);
-        BaseMod.addRelic(new ProstheticLimb(), RelicType.SHARED);
+        BaseMod.addRelic(new TrainingWheels(), RelicType.SHARED);
         BaseMod.addRelic(new HarmonizationMatrix(), RelicType.BLUE);
         BaseMod.addRelic(new Lubricant(), RelicType.BLUE);
         BaseMod.addRelic(new BeckoningSnecko(), RelicType.PURPLE);

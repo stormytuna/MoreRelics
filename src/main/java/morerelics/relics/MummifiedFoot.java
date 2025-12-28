@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import morerelics.MoreRelics;
 
@@ -44,7 +43,12 @@ public class MummifiedFoot extends BaseRelic {
         pulse = false;
     }
 
-    public void onEnterRoom(AbstractRoom room) {
+    public void onVictory() {
+        madeCardFreeThisCombat = true;
+        pulse = false;
+    }
+
+    public void atBattleStartPreDraw() {
         madeCardFreeThisCombat = false;
 
         flash();

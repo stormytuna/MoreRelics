@@ -23,6 +23,10 @@ public class CrimsonLily extends BaseRelic {
         return new CrimsonLily();
     }
 
+    public boolean canSpawn() {
+        return MoreRelics.isEnabled(ID);
+    }
+
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0] + STRENGTH_GAIN + DESCRIPTIONS[1];
     }

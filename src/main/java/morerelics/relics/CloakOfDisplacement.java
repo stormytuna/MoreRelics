@@ -22,6 +22,10 @@ public class CloakOfDisplacement extends BaseRelic {
         return new CloakOfDisplacement();
     }
 
+    public boolean canSpawn() {
+        return MoreRelics.isEnabled(ID);
+    }
+
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0] + TURNS_TO_APPLY +  DESCRIPTIONS[1];
     }

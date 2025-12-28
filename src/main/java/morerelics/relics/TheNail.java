@@ -20,6 +20,10 @@ public class TheNail extends BaseRelic {
         return new TheNail();
     }
 
+    public boolean canSpawn() {
+        return MoreRelics.isEnabled(ID);
+    }
+
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }

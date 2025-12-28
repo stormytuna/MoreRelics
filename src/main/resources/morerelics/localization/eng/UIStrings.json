@@ -1,4 +1,9 @@
 {
+  "${modID}:DisabledRelics": {
+    "TEXT": [
+      "Disable selected relics"
+    ]
+  },
   "${modID}:StuffedBird": {
     "TEXT": [
       "The bird looks at you funny...",

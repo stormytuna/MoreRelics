@@ -29,3 +29,5 @@ replay_pid*
 .project
 .settings/
 target/
+workshop/README.md
+workshop/steam_appid.txt

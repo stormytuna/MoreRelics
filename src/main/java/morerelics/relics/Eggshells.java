@@ -20,6 +20,10 @@ public class Eggshells extends BaseRelic {
         return new Eggshells();
     }
 
+    public boolean canSpawn() {
+        return MoreRelics.isEnabled(ID);
+    }
+
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }

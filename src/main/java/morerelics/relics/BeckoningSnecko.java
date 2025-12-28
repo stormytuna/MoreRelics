@@ -25,6 +25,10 @@ public class BeckoningSnecko extends BaseRelic {
         return new BeckoningSnecko();
     }
 
+    public boolean canSpawn() {
+        return MoreRelics.isEnabled(ID);
+    }
+
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0] + NEW_MANTRA_AMOUNT +  DESCRIPTIONS[1];
     }

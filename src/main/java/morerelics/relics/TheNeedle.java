@@ -25,6 +25,10 @@ public class TheNeedle extends BaseRelic {
         return new TheNeedle();
     }
 
+    public boolean canSpawn() {
+        return MoreRelics.isEnabled(ID);
+    }
+
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }

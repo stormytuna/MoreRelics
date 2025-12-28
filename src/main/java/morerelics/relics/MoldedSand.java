@@ -21,6 +21,10 @@ public class MoldedSand extends BaseRelic {
         return new MoldedSand();
     }
 
+    public boolean canSpawn() {
+        return MoreRelics.isEnabled(ID);
+    }
+
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }

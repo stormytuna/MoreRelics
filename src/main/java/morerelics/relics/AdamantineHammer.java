@@ -23,6 +23,10 @@ public class AdamantineHammer extends BaseRelic {
         return new AdamantineHammer();
     }
 
+    public boolean canSpawn() {
+        return MoreRelics.isEnabled(ID);
+    }
+
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }

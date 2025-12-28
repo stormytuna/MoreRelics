@@ -3,7 +3,6 @@ package morerelics.relics;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
@@ -11,7 +10,7 @@ import morerelics.MoreRelics;
 
 public class BarbedWire extends BaseRelic {
     public static final String ID = MoreRelics.makeID("BarbedWire");
-    public static final RelicTier TIER = RelicTier.RARE;
+    public static final RelicTier TIER = RelicTier.UNCOMMON;
     public static final LandingSound LANDING_SOUND = LandingSound.FLAT;
     public static final int THORNS_AMOUNT = 1;
 
@@ -21,6 +20,10 @@ public class BarbedWire extends BaseRelic {
 
     public AbstractRelic makeCopy() {
         return new BarbedWire();
+    }
+
+    public boolean canSpawn() {
+        return MoreRelics.isEnabled(ID);
     }
 
     public String getUpdatedDescription() {

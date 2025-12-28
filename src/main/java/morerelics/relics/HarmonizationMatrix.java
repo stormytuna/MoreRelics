@@ -23,6 +23,10 @@ public class HarmonizationMatrix extends BaseRelic {
         return new HarmonizationMatrix();
     }
 
+    public boolean canSpawn() {
+        return MoreRelics.isEnabled(ID);
+    }
+
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0] + TURNS_TO_APPLY_FOCUS + DESCRIPTIONS[1];
     }

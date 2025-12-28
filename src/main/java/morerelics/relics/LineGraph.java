@@ -20,6 +20,10 @@ public class LineGraph extends BaseRelic {
         return new LineGraph();
     }
 
+    public boolean canSpawn() {
+        return MoreRelics.isEnabled(ID);
+    }
+
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0] + String.format("%.0f%%", INTEREST_AMOUNT * 100) + DESCRIPTIONS[1];
     }

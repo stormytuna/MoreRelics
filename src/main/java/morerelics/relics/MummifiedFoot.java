@@ -2,7 +2,6 @@ package morerelics.relics;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -14,7 +13,7 @@ import morerelics.MoreRelics;
 
 public class MummifiedFoot extends BaseRelic {
     public static final String ID = MoreRelics.makeID("MummifiedFoot");
-    public static final RelicTier TIER = RelicTier.UNCOMMON;
+    public static final RelicTier TIER = RelicTier.COMMON;
     public static final LandingSound LANDING_SOUND = LandingSound.FLAT;
     private static boolean madeCardFreeThisCombat = true;
 
@@ -24,6 +23,10 @@ public class MummifiedFoot extends BaseRelic {
 
     public AbstractRelic makeCopy() {
         return new MummifiedFoot();
+    }
+
+    public boolean canSpawn() {
+        return MoreRelics.isEnabled(ID);
     }
 
     public String getUpdatedDescription() {

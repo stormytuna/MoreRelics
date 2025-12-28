@@ -25,6 +25,10 @@ public class PuritySeal extends BaseRelic {
         return new PuritySeal();
     }
 
+    public boolean canSpawn() {
+        return MoreRelics.isEnabled(ID);
+    }
+
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0] + ZEAL_AMOUNT + DESCRIPTIONS[1];
     }

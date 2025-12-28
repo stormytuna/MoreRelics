@@ -21,6 +21,10 @@ public class StickyHand extends BaseRelic {
         return new StickyHand();
     }
 
+    public boolean canSpawn() {
+        return MoreRelics.isEnabled(ID);
+    }
+
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0] + DRAW_AMOUNT + DESCRIPTIONS[1];
     }

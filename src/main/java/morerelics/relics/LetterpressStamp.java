@@ -27,6 +27,10 @@ public class LetterpressStamp extends BaseRelic {
         return new LetterpressStamp();
     }
 
+    public boolean canSpawn() {
+        return MoreRelics.isEnabled(ID);
+    }
+
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }

@@ -1,11 +1,14 @@
 package morerelics;
 
 import basemod.BaseMod;
+import basemod.ModLabel;
+import basemod.ModLabeledToggleButton;
+import basemod.ModPanel;
 import basemod.helpers.RelicType;
-import basemod.interfaces.AddAudioSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
+import basemod.patches.whatmod.WhatMod;
 import morerelics.relics.AdamantineHammer;
 import morerelics.relics.BarbedWire;
 import morerelics.relics.BeckoningSnecko;
@@ -28,7 +31,6 @@ import morerelics.relics.TinBracelet;
 import morerelics.relics.TrainingWheels;
 import morerelics.util.GeneralUtils;
 import morerelics.util.KeywordInfo;
-import morerelics.util.Sounds;
 import morerelics.util.TextureLoader;
 import com.badlogic.gdx.Files;
 import com.badlogic.gdx.Gdx;
@@ -40,14 +42,22 @@ import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.ModInfo;
 import com.evacipated.cardcrawl.modthespire.Patcher;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.megacrit.cardcrawl.cards.AbstractCard.CardColor;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.scannotation.AnnotationDB;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
+import java.lang.reflect.Type;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 @SpireInitializer
@@ -59,7 +69,11 @@ public class MoreRelics implements
     public static String modID; //Edit your pom.xml to change this
     static { loadModInfo(); }
     private static final String resourcesFolder = checkResourcesPath();
+    private static final String CONFIG_PATH = "preferences/morerelics.cfg";
     public static final Logger logger = LogManager.getLogger(modID); //Used to output to the console.
+
+    private static TreeMap<String, HashSet<String>> config = new TreeMap<>();
+    private static HashSet<String> disabled = new HashSet<>();
 
     //This is used to prefix the IDs of various objects like cards and relics,
     //to avoid conflicts between different mods using the same name for things.
@@ -77,16 +91,90 @@ public class MoreRelics implements
         logger.info(modID + " subscribed to BaseMod.");
     }
 
+    private static void saveConfig() {
+        String sConfig = new Gson().toJson(config);
+        Gdx.files.local(CONFIG_PATH).writeString(sConfig, false, String.valueOf(StandardCharsets.UTF_8));
+        logger.info("saved config=");
+    }
+
+    private static void loadConfig() {
+        if (Gdx.files.local(CONFIG_PATH).exists()) {
+            String sConfig = Gdx.files.local(CONFIG_PATH).readString(String.valueOf(StandardCharsets.UTF_8));
+            logger.info("loaded config=" + sConfig);
+            Type mapType = (new TypeToken<TreeMap<String, HashSet<String>>>() {
+            }.getType());
+            config = new Gson().fromJson(sConfig, mapType);
+            disabled = config.get("disabled");
+        } else {
+            config.put("disabled", disabled);
+        }
+    }
+
+    public static boolean isEnabled(String relicID) {
+        return !disabled.contains(relicID);
+    }
+
+    private static float getXPos(int index) {
+        return 410.0F + 320.0F * (index / 10);
+    }
+
+    private static float getYPos(int index) {
+        return 660.0F - 50F * (index % 10);
+    }
+
+    private static UIStrings getUIStrings(String uiName) {
+        return CardCrawlGame.languagePack.getUIString(makeID(uiName));
+    }
+
     @Override
     public void receivePostInitialize() {
-        //This loads the image used as an icon in the in-game mods menu.
-        Texture badgeTexture = TextureLoader.getTexture(imagePath("badge.png"));
-        //Set up the mod information displayed in the in-game mods menu.
-        //The information used is taken from your pom.xml file.
+        loadConfig();
 
-        //If you want to set up a config panel, that will be done here.
-        //You can find information about this on the BaseMod wiki page "Mod Config and Panel".
-        BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, null);
+        ModPanel configPanel = new ModPanel();
+        String labelText = getUIStrings("DisabledRelics").TEXT[0];
+        ModLabel disabledLabel = new ModLabel(labelText, 400f, 730f, configPanel, label -> { });
+        configPanel.addUIElement(disabledLabel);
+
+        String[] allRelicIds = {
+            AdamantineHammer.ID,
+            BarbedWire.ID,
+            CloakOfDisplacement.ID,
+            Eggshells.ID,
+            LetterpressStamp.ID,
+            LineGraph.ID,
+            MoldedSand.ID,
+            MummifiedFoot.ID,
+            ProstheticLimb.ID,
+            PuritySeal.ID,
+            StickyHand.ID,
+            StuffedBird.ID,
+            TheNail.ID,
+            TheNeedle.ID,
+            TinBracelet.ID,
+            TrainingWheels.ID,
+            HarmonizationMatrix.ID,
+            Lubricant.ID,
+            BeckoningSnecko.ID,
+            CrimsonLily.ID,
+        };
+
+        for (int i = 0; i < allRelicIds.length; i++) {
+            String relicID = allRelicIds[i];
+            ModLabeledToggleButton disableButton = new ModLabeledToggleButton(CardCrawlGame.languagePack.getRelicStrings(relicID).NAME, getXPos(i), getYPos(i), Settings.CREAM_COLOR, FontHelper.charDescFont, !isEnabled(relicID), configPanel, label -> { }, button -> {
+                if (button.enabled) {
+                    disabled.add(relicID);
+                } else {
+                    disabled.remove(relicID);
+                }
+
+                saveConfig();
+            });
+
+            configPanel.addUIElement(disableButton);
+        }
+
+        Texture badgeTexture = TextureLoader.getTexture(imagePath("badge.png"));
+        BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, configPanel);
     }
 
     @Override

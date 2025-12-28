@@ -21,6 +21,10 @@ public class ProstheticLimb extends BaseRelic {
         return new ProstheticLimb();
     }
 
+    public boolean canSpawn() {
+        return MoreRelics.isEnabled(ID);
+    }
+
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0] + DRAW + DESCRIPTIONS[1] + EXTRA_HAND_SIZE + DESCRIPTIONS[2];
     }

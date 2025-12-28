@@ -51,6 +51,10 @@ public class StuffedBird extends BaseRelic {
         return new StuffedBird();
     }
 
+    public boolean canSpawn() {
+        return MoreRelics.isEnabled(ID);
+    }
+
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }

@@ -19,6 +19,10 @@ public class TrainingWheels extends BaseRelic {
         return new TrainingWheels();
     }
 
+    public boolean canSpawn() {
+        return MoreRelics.isEnabled(ID);
+    }
+
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }

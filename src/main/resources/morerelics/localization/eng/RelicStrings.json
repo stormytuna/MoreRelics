@@ -148,5 +148,13 @@
       "At the start of your turn, gain #b",
       " #yThorns."
     ]
+  },
+  "${modID}:BottomlessFlask": {
+    "NAME": "Bottomless Flask",
+    "FLAVOR": "Filled with a mysterious liquid that evaporates quickly. When you're not looking, it refills itself.",
+    "DESCRIPTIONS": [
+      "You can now brew #b",
+      " potions at Rest Sites."
+    ]
   }
 }

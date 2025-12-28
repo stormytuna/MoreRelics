@@ -13,5 +13,12 @@
       "The bird stifles a noise...",
       "The bird has an eerie smile..."
     ]
+  },
+  "${modID}:BottomlessFlaskOption": {
+    "TEXT": [
+      "Brew",
+      "Brew ",
+      " potions"
+    ]
   }
 }

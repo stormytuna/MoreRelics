@@ -66,6 +66,4 @@ public class MummifiedFoot extends BaseRelic {
             return __result;
         }
     }
-
-    
 }

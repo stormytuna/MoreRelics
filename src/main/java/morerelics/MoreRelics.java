@@ -12,6 +12,7 @@ import basemod.patches.whatmod.WhatMod;
 import morerelics.relics.AdamantineHammer;
 import morerelics.relics.BarbedWire;
 import morerelics.relics.BeckoningSnecko;
+import morerelics.relics.BottomlessFlask;
 import morerelics.relics.CloakOfDisplacement;
 import morerelics.relics.CrimsonLily;
 import morerelics.relics.Eggshells;
@@ -138,6 +139,7 @@ public class MoreRelics implements
         String[] allRelicIds = {
             AdamantineHammer.ID,
             BarbedWire.ID,
+            BottomlessFlask.ID,
             CloakOfDisplacement.ID,
             Eggshells.ID,
             LetterpressStamp.ID,
@@ -181,6 +183,7 @@ public class MoreRelics implements
     public void receiveEditRelics() {
         BaseMod.addRelic(new AdamantineHammer(), RelicType.SHARED);
         BaseMod.addRelic(new BarbedWire(), RelicType.SHARED);
+        BaseMod.addRelic(new BottomlessFlask(), RelicType.SHARED);
         BaseMod.addRelic(new CloakOfDisplacement(), RelicType.SHARED);
         BaseMod.addRelic(new Eggshells(), RelicType.SHARED);
         BaseMod.addRelic(new LetterpressStamp(), RelicType.SHARED);

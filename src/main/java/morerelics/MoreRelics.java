@@ -32,6 +32,7 @@ import morerelics.relics.TheNail;
 import morerelics.relics.TheNeedle;
 import morerelics.relics.TinBracelet;
 import morerelics.relics.TrainingWheels;
+import morerelics.ui.ModLabeledToggleButtonRelicTip;
 import morerelics.util.GeneralUtils;
 import morerelics.util.KeywordInfo;
 import morerelics.util.TextureLoader;
@@ -50,6 +51,7 @@ import com.google.gson.reflect.TypeToken;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
 
 import org.apache.logging.log4j.LogManager;
@@ -164,7 +166,7 @@ public class MoreRelics implements
 
         for (int i = 0; i < allRelicIds.length; i++) {
             String relicID = allRelicIds[i];
-            ModLabeledToggleButton disableButton = new ModLabeledToggleButton(CardCrawlGame.languagePack.getRelicStrings(relicID).NAME, getXPos(i), getYPos(i), Settings.CREAM_COLOR, FontHelper.charDescFont, !isEnabled(relicID), configPanel, label -> { }, button -> {
+            ModLabeledToggleButtonRelicTip disableButton = new ModLabeledToggleButtonRelicTip(RelicLibrary.getRelic(relicID), CardCrawlGame.languagePack.getRelicStrings(relicID).NAME, getXPos(i), getYPos(i), Settings.CREAM_COLOR, FontHelper.charDescFont, !isEnabled(relicID), configPanel, label -> { }, button -> {
                 if (button.enabled) {
                     disabled.add(relicID);
                 } else {

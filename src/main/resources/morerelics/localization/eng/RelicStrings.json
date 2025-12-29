@@ -171,5 +171,12 @@
     "DESCRIPTIONS": [
       "Combat reward screens now contain colorless cards."
     ]
+  },
+  "${modID}:Memento": {
+    "NAME": "Memento",
+    "FLAVOR": "\"Where did I find this again...\"",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose a card from your color to add to your deck."
+    ]
   }
 }

@@ -21,6 +21,7 @@ import morerelics.relics.HarmonizationMatrix;
 import morerelics.relics.LetterpressStamp;
 import morerelics.relics.LineGraph;
 import morerelics.relics.Lubricant;
+import morerelics.relics.Memento;
 import morerelics.relics.MoldedSand;
 import morerelics.relics.MummifiedFoot;
 import morerelics.relics.ProstheticLimb;
@@ -144,6 +145,7 @@ public class MoreRelics implements
             Eggshells.ID,
             LetterpressStamp.ID,
             LineGraph.ID,
+            Memento.ID,
             MoldedSand.ID,
             MummifiedFoot.ID,
             ProstheticLimb.ID,
@@ -190,6 +192,7 @@ public class MoreRelics implements
         BaseMod.addRelic(new Eggshells(), RelicType.SHARED);
         BaseMod.addRelic(new LetterpressStamp(), RelicType.SHARED);
         BaseMod.addRelic(new LineGraph(), RelicType.SHARED);
+        BaseMod.addRelic(new Memento(), RelicType.SHARED);
         BaseMod.addRelic(new MoldedSand(), RelicType.SHARED);
         BaseMod.addRelic(new MummifiedFoot(), RelicType.SHARED);
         BaseMod.addRelic(new ProstheticLimb(), RelicType.SHARED);

@@ -20,5 +20,12 @@
       "Brew ",
       " potions"
     ]
+  },
+  "${modID}:Memento": {
+    "TEXT": [
+      "Remember...",
+      "Recall...",
+      "What's happening...?"
+    ]
   }
 }

@@ -3,7 +3,7 @@
   "title": "More Relics",
   "description": "Adds some new relics and pads out Defect\u0027s and Watcher\u0027s relic pools.",
   "visibility": "private",
-  "changeNote": "v0.0.1\n\n- Prerelease",
+  "changeNote": "v0.0.3\n\n- Prerelease",
   "tags": [
     "Relics",
     "Content"

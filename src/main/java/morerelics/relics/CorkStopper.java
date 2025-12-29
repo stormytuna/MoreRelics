@@ -9,7 +9,7 @@ import morerelics.MoreRelics;
 
 public class CorkStopper extends BaseRelic {
     public static final String ID = MoreRelics.makeID("CorkStopper");
-    public static final RelicTier TIER = RelicTier.RARE;
+    public static final RelicTier TIER = RelicTier.COMMON;
     public static final LandingSound LANDING_SOUND = LandingSound.SOLID;
     public static final int DRAW_AMOUNT = 1;
 

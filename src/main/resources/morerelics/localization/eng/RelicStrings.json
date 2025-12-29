@@ -164,5 +164,12 @@
       "Whenever you use a potion, draw #b",
       " card."
     ]
+  },
+  "${modID}:DullShard": {
+    "NAME": "Dull Shard",
+    "FLAVOR": "Looking through the shard you see nothing particularly interesting.",
+    "DESCRIPTIONS": [
+      "Combat reward screens now contain colorless cards."
+    ]
   }
 }

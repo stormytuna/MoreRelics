@@ -15,6 +15,7 @@ import morerelics.relics.BottomlessFlask;
 import morerelics.relics.CloakOfDisplacement;
 import morerelics.relics.CorkStopper;
 import morerelics.relics.CrimsonLily;
+import morerelics.relics.DullShard;
 import morerelics.relics.Eggshells;
 import morerelics.relics.HarmonizationMatrix;
 import morerelics.relics.LetterpressStamp;
@@ -139,6 +140,7 @@ public class MoreRelics implements
             BottomlessFlask.ID,
             CloakOfDisplacement.ID,
             CorkStopper.ID,
+            DullShard.ID,
             Eggshells.ID,
             LetterpressStamp.ID,
             LineGraph.ID,
@@ -184,6 +186,7 @@ public class MoreRelics implements
         BaseMod.addRelic(new BottomlessFlask(), RelicType.SHARED);
         BaseMod.addRelic(new CloakOfDisplacement(), RelicType.SHARED);
         BaseMod.addRelic(new CorkStopper(), RelicType.SHARED);
+        BaseMod.addRelic(new DullShard(), RelicType.SHARED);
         BaseMod.addRelic(new Eggshells(), RelicType.SHARED);
         BaseMod.addRelic(new LetterpressStamp(), RelicType.SHARED);
         BaseMod.addRelic(new LineGraph(), RelicType.SHARED);

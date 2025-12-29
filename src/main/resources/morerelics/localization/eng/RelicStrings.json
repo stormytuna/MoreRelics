@@ -156,5 +156,13 @@
       "You can now brew #b",
       " potions at Rest Sites."
     ]
+  },
+  "${modID}:CorkStopper": {
+    "NAME": "Cork Stopper",
+    "FLAVOR": "Its holes have holes which have holes...",
+    "DESCRIPTIONS": [
+      "Whenever you use a potion, draw #b",
+      " card."
+    ]
   }
 }

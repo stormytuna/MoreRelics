@@ -8,12 +8,12 @@ import basemod.helpers.RelicType;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
-import basemod.patches.whatmod.WhatMod;
 import morerelics.relics.AdamantineHammer;
 import morerelics.relics.BarbedWire;
 import morerelics.relics.BeckoningSnecko;
 import morerelics.relics.BottomlessFlask;
 import morerelics.relics.CloakOfDisplacement;
+import morerelics.relics.CorkStopper;
 import morerelics.relics.CrimsonLily;
 import morerelics.relics.Eggshells;
 import morerelics.relics.HarmonizationMatrix;
@@ -45,13 +45,10 @@ import com.evacipated.cardcrawl.modthespire.Patcher;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardColor;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -141,6 +138,7 @@ public class MoreRelics implements
             BarbedWire.ID,
             BottomlessFlask.ID,
             CloakOfDisplacement.ID,
+            CorkStopper.ID,
             Eggshells.ID,
             LetterpressStamp.ID,
             LineGraph.ID,
@@ -185,6 +183,7 @@ public class MoreRelics implements
         BaseMod.addRelic(new BarbedWire(), RelicType.SHARED);
         BaseMod.addRelic(new BottomlessFlask(), RelicType.SHARED);
         BaseMod.addRelic(new CloakOfDisplacement(), RelicType.SHARED);
+        BaseMod.addRelic(new CorkStopper(), RelicType.SHARED);
         BaseMod.addRelic(new Eggshells(), RelicType.SHARED);
         BaseMod.addRelic(new LetterpressStamp(), RelicType.SHARED);
         BaseMod.addRelic(new LineGraph(), RelicType.SHARED);

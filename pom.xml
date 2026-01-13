@@ -24,10 +24,19 @@
 
     <!-- This information will be displayed in ModTheSpire, the modded launcher. -->
     <name>More Relics</name>
-    <version>0.0.3</version>
+    <version>1.0.0</version>
     <!-- Avoid using \ in this description, as they can cause the description to fail to load. -->
     <!-- If you really want to use them, you'll need to "escape" them by putting another one in front, like \\ -->
-    <description>Adds some new relics and pads out Defect's and Watcher's relic pools.</description>
+    <description>
+        - Adds 24 new relics
+            - 2 Common
+            - 7 Uncommon
+            - 4 Rare
+            - 7 Boss
+            - 4 Shop
+        - Adds relics to Defect's and Watcher's pool to match the number that Ironclad and Silent have
+        - Configuration to disable each relic individually
+    </description>
 
     <!--You shouldn't need to change anything below this point, but feel free to look at it.-->
     <!--You'll get a warning regarding these when you package your mod, but don't worry, it's just set up like this for convenience.-->

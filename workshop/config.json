@@ -1,7 +1,7 @@
 {
   "steamPublishedID": "3628535600",
   "title": "More Relics",
-  "description": "[h2]TLDR[/h2]\n- Adds 24 new relics\n\t- 2 Common\n\t- 6 Uncommon\n\t- 5 Rare\n\t- 7 Boss\n\t- 4 Shop\n- Adds relics to Defect's and Watcher's pool to match the number that Ironclad and Silent have\n- Configuration to disable each relic individually\n[hr][/hr]\n",
+  "description": "Replace me with workshopDescription.txt!",
   "visibility": "private",
   "changeNote": "v1.0.0\n\n- Release",
   "tags": [
